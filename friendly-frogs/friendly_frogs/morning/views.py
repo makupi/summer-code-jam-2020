@@ -11,7 +11,9 @@ class DashboardView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         user = self.request.user
+        print(user)  # this is for debug purpose
         source = Profile.objects.get(user=user).news_source
+        print(source)  # this is for debug purpose
         news = News()
         context['news'] = news.get_news(source)['articles']
         return context

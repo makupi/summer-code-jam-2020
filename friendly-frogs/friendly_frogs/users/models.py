@@ -1,7 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-choices = (('bbc-news', "BBC-NEWS"),)
+choices = (('bbc-news', "BBC NEWS"),
+           ('associated-press', "Associated Press"),
+           ('bild', "Bild"),
+           ('bloomberg', "Bloomberg")
+           )
 
 
 class Profile(models.Model):

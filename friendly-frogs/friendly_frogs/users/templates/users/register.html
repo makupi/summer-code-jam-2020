@@ -4,8 +4,8 @@
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            {% for fields in form_p %}
-            {{ form_p.news_source }}
+            {% for fields in second_form %}
+            {{ second_form.news_source }}
             {% endfor %}
             <button type="submit">Sign Up</button>
         </form>
